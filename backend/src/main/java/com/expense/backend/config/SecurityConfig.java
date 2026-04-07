@@ -50,6 +50,11 @@ public class SecurityConfig {
     "http://localhost:5174",
     "https://smart-expense-manager-five.vercel.app"
 ));
+config.setAllowedOriginPatterns(List.of(
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "https://*.vercel.app"
+));
         config.setAllowedMethods(List.of("GET","POST","PUT","DELETE","OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
